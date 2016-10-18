@@ -1,0 +1,24 @@
+---
+name: get_location
+pack: vR5600_base
+description: Perfroms a get on the Location header
+runner_type: python-script
+entry_point: "get_location.py"
+enabled: true
+parameters:
+    deviceIP:
+        type: string
+        description: ip address of the vRouter
+        required: true
+    login:
+        type: string
+        description: login of vRouter
+        required: true
+    password:
+        type: string
+        description: password the vRouter
+        required: true
+    path:
+        type: string
+        description: path retrived from key value datastore
+        required: true

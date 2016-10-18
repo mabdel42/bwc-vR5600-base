@@ -1,0 +1,9 @@
+---
+name: vR5600_base
+description: Contains basic actions on vR that are used in workflows.
+keywords:
+    - example
+    - test
+version: 0.1
+author: Mehdi Abdelouahab
+email: mabdelou@brocade.com

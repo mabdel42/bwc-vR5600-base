@@ -1,0 +1,35 @@
+---
+    chain:
+        -
+            name: "sh_ip_route"
+            ref: "vR-5600.sh-ip-route"
+            parameters:
+                deviceIP: "{{deviceIP}}"
+                login: "{{login}}"
+                password: "{{password}}"
+            on-success: "get_Location"
+            on-failure: "fail-task"
+        -
+            name: "get_Location"
+            ref: "vR-5600.getLocation"
+            parameters:
+                deviceIP: "{{deviceIP}}"
+                login: "{{login}}"
+                password: "{{password}}"
+                path: "{{system.cmd_path}}"
+            on-success:  "display_result"
+            on-failure: "fail-task"
+        -
+            name: "display_result"
+            ref: "core.local"
+            parameters:
+                #cmd: "echo Result: {{get_Location.stdout}}"
+                cmd: "echo -e {{get_Location.stdout}}"
+            #on-success:  "end"
+            on-failure: "fail-task"
+        -
+            name: "fail-task"
+            ref: "core.local"
+            parameters:
+                cmd: "echo fail "
+    default: "sh_ip_route"
