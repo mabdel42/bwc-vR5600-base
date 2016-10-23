@@ -1,22 +1,22 @@
 ---
 name: save
 pack: vR5600_base
-description: Save a configuration on a vR
+description: Save configuration
 runner_type: python-script
 entry_point: "save.py"
 enabled: true
 parameters:
     deviceIP:
         type: string
-        description: ip address of the vRouter
+        description: IP address of vRouter
         required: true
     login:
         type: string
-        description: login of vRouter
+        description: Login of vRouter
         required: true
     password:
         type: string
-        description: password the vRouter
+        description: Password of vRouter
         required: true
     cmd_path:
         type: string

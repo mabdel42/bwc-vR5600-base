@@ -1,20 +1,20 @@
 ---
 name: start_cfg_session
 pack: vR5600_base
-description: Start a configuration session on a vR
+description: Start a configuration session
 runner_type: python-script
 entry_point: "start_cfg_session.py"
 enabled: true
 parameters:
     deviceIP:
         type: string
-        description: ip address of the vRouter
+        description: IP address of vRouter
         required: true
     login:
         type: string
-        description: login of vRouter
+        description: Login of vRouter
         required: true
     password:
         type: string
-        description: password the vRouter
+        description: Password of vRouter
         required: true

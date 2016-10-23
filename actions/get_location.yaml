@@ -8,15 +8,15 @@ enabled: true
 parameters:
     deviceIP:
         type: string
-        description: ip address of the vRouter
+        description: IP address of vRouter
         required: true
     login:
         type: string
-        description: login of vRouter
+        description: Login of vRouter
         required: true
     password:
         type: string
-        description: password the vRouter
+        description: Password of vRouter
         required: true
     path:
         type: string
