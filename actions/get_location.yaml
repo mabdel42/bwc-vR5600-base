@@ -1,7 +1,7 @@
 ---
 name: get_location
 pack: vR5600_base
-description: Perfroms a get on the Location header
+description: Perform an HTTP Get on the Location header
 runner_type: python-script
 entry_point: "get_location.py"
 enabled: true
